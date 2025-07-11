@@ -86,7 +86,7 @@ const Index = () => {
       <section className="py-12 md:py-20 px-4 text-center bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
         <div className="container mx-auto max-w-4xl">
           <div className="mb-6 md:mb-8">
-            <img src="/lovable-uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-24 md:h-32 w-auto mx-auto mb-4" />
+            <img src="/uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-24 md:h-32 w-auto mx-auto mb-4" />
             <div className="text-center space-y-3 mb-6">
               {/* <p className="text-lg md:text-xl text-orange-800 dark:text-orange-200 font-semibold italic">
                 వసవి మాత శ్లోకాలు

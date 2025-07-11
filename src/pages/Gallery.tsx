@@ -28,16 +28,16 @@ const Gallery = () => {
 
   // Construction progress images
   const constructionImages = [
-    "/lovable-uploads/53d9d85a-ea09-468f-b460-0ec6a3624bd8.png",
-    "/lovable-uploads/e6a8b053-2ff9-40a9-98b7-d6bd9dc2efb8.png",
-    "/lovable-uploads/63deb1eb-e962-4787-ad07-ff5578cf46e2.png",
-    "/lovable-uploads/fd7c19e3-171b-4dc4-a606-f6ad69443e9c.png"
+    "/uploads/53d9d85a-ea09-468f-b460-0ec6a3624bd8.png",
+    "/uploads/e6a8b053-2ff9-40a9-98b7-d6bd9dc2efb8.png",
+    "/uploads/63deb1eb-e962-4787-ad07-ff5578cf46e2.png",
+    "/uploads/fd7c19e3-171b-4dc4-a606-f6ad69443e9c.png"
   ];
 
   // Community events images
   const eventImages = [
-    "/lovable-uploads/340ba2bc-9d08-4c59-9ac6-89b7e383d2c7.png",
-    "/lovable-uploads/ac9fb44c-0fce-497d-af22-586f8755a9ed.png"
+    "/uploads/340ba2bc-9d08-4c59-9ac6-89b7e383d2c7.png",
+    "/uploads/ac9fb44c-0fce-497d-af22-586f8755a9ed.png"
   ];
 
   return (

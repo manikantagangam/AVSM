@@ -68,7 +68,7 @@ const Navigation = () => {
     <header className="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2 flex-1 min-w-0">
-          <img src="/lovable-uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-10 w-auto flex-shrink-0" />
+          <img src="/uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-10 w-auto flex-shrink-0" />
           <span className="text-sm md:text-base font-bold text-orange-800 dark:text-orange-300 truncate">{currentContent.logoText}</span>
         </div>
         
