@@ -9,14 +9,14 @@ const Gallery = () => {
 
   const content = {
     en: {
-      title: "Temple Gallery",
+      title: "Gallery",
       subtitle: "Photos of our temple construction progress and community events",
       constructionTitle: "Construction Progress",
       eventsTitle: "Community Events",
       noPhotos: "Photos will be uploaded soon. Stay tuned for updates on our temple construction progress and community gatherings."
     },
     te: {
-      title: "దేవాలయ గ్యాలరీ",
+      title: "గ్యాలరీ",
       subtitle: "మా దేవాలయ నిర్మాణ పురోగతి మరియు సమాజ కార్యక్రమాల ఫోటోలు",
       constructionTitle: "నిర్మాణ పురోగతి",
       eventsTitle: "సమాజ కార్యక్రమాలు",
