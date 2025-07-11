@@ -1,0 +1,276 @@
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Users, Building, Phone, Mail, MapPin, Star } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import Navigation from "@/components/Navigation";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
+
+const Index = () => {
+  const { language } = useLanguage();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
+  const content = {
+    en: {
+      slokam : "Om Vāsavāmbhāya vidmahe, Kusumaputryai dhīmahi | tanno Vāsavī prachodayāt ||",
+      title: "Help Build Our Sacred Temple",
+      subtitle: "Join us in creating a divine space for worship, community, and spiritual growth",
+      donateNow: "Donate Now",
+      learnMore: "Learn More",
+      aboutUs: "About Us",
+      aboutText: "We are a dedicated community of devotees committed to building a magnificent temple that will serve as a spiritual sanctuary for generations to come. Our organization was founded with the vision of creating a sacred space where people can find peace, connect with the divine, and celebrate our rich cultural heritage together.",
+      ourMission: "Our Mission",
+      missionText: "We are building a magnificent temple that will serve as a spiritual center for our community for generations to come. Your generous donations will help us create a sacred space where devotees can find peace, perform prayers, and celebrate festivals together.",
+      progress: "Construction Progress",
+      progressText: "We have raised ₹12,50,000 out of our ₹50,00,000 goal",
+      contact: "Contact Us",
+      features: {
+        community: "Community Center",
+        communityDesc: "A space for spiritual gatherings and cultural events",
+        worship: "Prayer Halls",
+        worshipDesc: "Multiple halls for different religious ceremonies",
+        education: "Learning Center",
+        educationDesc: "Religious education and cultural classes for all ages"
+      },
+      contactDetails: {
+        phone: "+91 98765 43210",
+        email: "aryavysyasangammupkal@gmail.com",
+        address: "Temple Construction Committee, Main Street, Your City - 500001"
+      }
+    },
+    te: {
+      slokam : "ఓం వాసవాంభాయ విద్యామహే, కుసుమపుత్ర్యై ధీమహి। తన్నో వాసవీ ప్రచోదయాత్॥",
+      title: "మా పవిత్ర దేవాలయ నిర్మాణంలో సహాయం చేయండి",
+      subtitle: "ఆధ్యాత్మిక వృద్ధి, సమాజ సేవ మరియు పూజల కోసం దివ్య స్థలం సృష్టించడంలో మాతో చేరండి",
+      donateNow: "ఇప్పుడు దానం చేయండి",
+      learnMore: "మరింత తెలుసుకోండి",
+      aboutUs: "మా గురించి",
+      aboutText: "మేము తరతరాలుగా ఆధ్యాత్మిక అభయారణ్యంగా పనిచేసే అద్భుతమైన దేవాలయాన్ని నిర్మించడానికి అంకితభావంతో ఉన్న భక్తుల సమాజం. ప్రజలు శాంతిని పొందగల, దైవంతో అనుసంధానం కలిగి ఉండగల మరియు మన గొప్ప సాంస్కృతిక వారసత్వాన్ని కలిసి జరుపుకోగల పవిత్ర స్థలాన్ని సృష్టించాలనే దృష్టితో మా సంస్థ స్థాపించబడింది.",
+      ourMission: "మా లక్ష్యం",
+      missionText: "మేము మా సమాజానికి తరతరాలుగా సేవ చేసే అద్భుతమైన దేవాలయాన్ని నిర్మిస్తున్నాము. మీ దాతృత్వ దానాలు భక్తులు శాంతిని పొందే, ప్రార్థనలు చేసే మరియు పండుగలను జరుపుకునే పవిత్ర స్థలాన్ని సృష్టించడంలో మాకు సహాయపడతాయి.",
+      progress: "నిర్మాణ పురోగతి",
+      progressText: "మా ₹50,00,000 లక్ష్యంలో ₹12,50,000 సేకరించాము",
+      contact: "మమ్మల్ని సంప్రదించండి",
+      features: {
+        community: "సామాజిక కేంద్రం",
+        communityDesc: "ఆధ్యాత్మిక సమావేశాలు మరియు సాంస్కృతిక కార్యక్రమాలకు స్థలం",
+        worship: "ప్రార్థనా మందిరాలు",
+        worshipDesc: "వివిధ మత వేడుకలకు అనేక మందిరాలు",
+        education: "అభ్యాస కేంద్రం",
+        educationDesc: "అన్ని వయసుల వారికి మత విద్య మరియు సాంస్కృతిక తరగతులు"
+      },
+      contactDetails: {
+        phone: "+91 98765 43210",
+        email: "aryavysyasangammupkal@gmail.com",
+        address: "దేవాలయ నిర్మాణ కమిటీ, మెయిన్ స్ట్రీట్, మీ నగరం - 500001"
+      }
+    }
+  };
+
+  const currentContent = content[language];
+
+  const handleDonateNow = () => {
+    navigate('/donate-us');
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="py-12 md:py-20 px-4 text-center bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
+        <div className="container mx-auto max-w-4xl">
+          <div className="mb-6 md:mb-8">
+            <img src="/lovable-uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-24 md:h-32 w-auto mx-auto mb-4" />
+            <div className="text-center space-y-3 mb-6">
+              {/* <p className="text-lg md:text-xl text-orange-800 dark:text-orange-200 font-semibold italic">
+                వసవి మాత శ్లోకాలు
+              </p> */}
+              <div className="bg-white/80 dark:bg-gray-800/80 rounded-lg p-4 md:p-6 max-w-3xl mx-auto">
+                <p className="text-base md:text-lg text-orange-900 dark:text-orange-100 mb-3 leading-relaxed">
+                  {/* "వసవి మాత మమ్మల్ని రక్షించేది, మా కుటుంబాలను ఆశీర్వదించేది<br />
+                  మా వ్యాపారాలలో వృద్ధిని కలిగించేది, మా జీవితాలను పవిత్రం చేసేది" */}
+                  "ఓం వాసవాంబాయై విద్మహే, కుసుమపుత్రిచ ధీమహి। తన్నో వాసవి ప్రచోదయాత్।।"
+                  {/* {currentContent.slokam} */}
+                </p>
+                {/* <p className="text-base md:text-lg text-orange-900 dark:text-orange-100 leading-relaxed">
+                  "కోమతి వైశ్యుల కులదైవం వసవి మాత, మా సంప్రదాయాలను కాపాడేది<br />
+                  సత్యం, న్యాయం, దర్మంతో మాకు మార్గదర్శకత్వం చేసేది"
+                </p> */}
+              </div>
+            </div>
+          </div>
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-orange-900 dark:text-orange-100 mb-4 md:mb-6 leading-tight px-2">
+            {currentContent.title}
+          </h1>
+          <p className="text-lg md:text-xl text-orange-700 dark:text-orange-300 mb-6 md:mb-8 max-w-3xl mx-auto px-4">
+            {currentContent.subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-600 text-white px-6 md:px-8 py-3 text-base md:text-lg w-full sm:w-auto"
+              onClick={handleDonateNow}
+            >
+              🙏 {currentContent.donateNow}
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-orange-600 text-orange-600 hover:bg-orange-50 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-gray-700 px-6 md:px-8 py-3 text-base md:text-lg w-full sm:w-auto"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              {currentContent.learnMore}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="py-12 md:py-16 px-4 bg-white dark:bg-gray-800">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-6 md:mb-8">{currentContent.aboutUs}</h2>
+          <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-3xl mx-auto px-4">
+            {currentContent.aboutText}
+          </p>
+        </div>
+      </section>
+
+      {/* Progress Section */}
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-gray-700 dark:to-gray-600">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">{currentContent.progress}</h2>
+          <div className="max-w-2xl mx-auto px-4">
+            <Progress value={25} className="h-3 md:h-4 mb-4" />
+            <p className="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">{currentContent.progressText}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+              <div className="text-center p-4">
+                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹12.5L</div>
+                <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Raised</div>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹50L</div>
+                <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Goal</div>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">250+</div>
+                <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Donors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section id="mission" className="py-12 md:py-16 px-4 bg-white dark:bg-gray-800">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8 md:mb-12">{currentContent.ourMission}</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="px-4">
+              <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                {currentContent.missionText}
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <Users className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.community}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.communityDesc}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Star className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.worship}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.worshipDesc}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.education}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.educationDesc}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg border-gray-200 dark:border-gray-600 p-6 md:p-8 mx-4 lg:mx-0">
+              <div className="bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-600 dark:to-gray-500 rounded-lg h-48 md:h-64 flex items-center justify-center">
+                <Building className="h-24 w-24 md:h-32 md:w-32 text-orange-600 dark:text-orange-400" />
+              </div>
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-4 italic text-sm md:text-base">Artist's impression of the temple</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-900 to-amber-900 dark:from-gray-900 dark:to-gray-800 text-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">{currentContent.contact}</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6 md:gap-8">
+              <div className="flex flex-col items-center text-center p-4">
+                <Phone className="h-6 w-6 md:h-8 md:w-8 mb-4" />
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Phone</h3>
+                <p className="text-sm md:text-base">{currentContent.contactDetails.phone}</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <Mail className="h-6 w-6 md:h-8 md:w-8 mb-4" />
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Email</h3>
+                <p className="text-sm md:text-base break-all">{currentContent.contactDetails.email}</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <MapPin className="h-6 w-6 md:h-8 md:w-8 mb-4" />
+                <h3 className="font-semibold mb-2 text-sm md:text-base">Address</h3>
+                <p className="text-xs md:text-sm">{currentContent.contactDetails.address}</p>
+              </div>
+            </div>
+            
+            {/* Google Map */}
+            <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
+              <div className="h-64 md:h-80 w-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d943.6163020080113!2d78.36246392912408!3d18.910791840522936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751126747038!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Temple Location"
+                ></iframe>
+              </div>
+              <div className="p-4 bg-white dark:bg-gray-700">
+                <p className="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  📍 Temple Construction Site Location
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 md:py-8 px-4">
+        <div className="container mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-400" />
+            <span className="text-base md:text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
+          </div>
+          <p className="text-gray-400 text-xs md:text-sm px-4">
+            © 2025 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
