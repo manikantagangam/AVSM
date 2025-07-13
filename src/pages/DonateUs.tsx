@@ -18,31 +18,31 @@ const DonateUs = () => {
       title: "Support Our Temple Construction",
       subtitle: "Your generous donations help us build a sacred space for future generations",
       bankDetails: "Bank Account Details",
-      accountName: "Temple Construction Committee",
-      accountNumber: "1234567890123456",
+      accountName: "Vysya Sangam Mupkal",
+      accountNumber: "000000000000000",
       ifscCode: "KKBK0008370",
       bankName: "Kotak Mahindra Bank",
       branch: "Mupkal",
-      upiId: "templeproject@sbi",
+      upiId: "@kotak",
       onlineDonation: "Online Donation Options",
       copy: "Copy",
       copied: "Copied!",
-      contactForDonation: "For any queries regarding donations, please contact us at +91 98765 43210"
+      contactForDonation: "For any queries regarding donations, please contact us at +91 9490241116"
     },
     te: {
       title: "మా దేవాలయ నిర్మాణానికి మద్దతు ఇవ్వండి",
       subtitle: "మీ దాతృత్వ దానాలు భవిష్యత్ తరాలకు పవిత్ర స్థలాన్ని నిర్మించడంలో మాకు సహాయపడతాయి",
       bankDetails: "బ్యాంక్ ఖాతా వివరాలు",
-      accountName: "దేవాలయ నిర్మాణ కమిటీ",
-      accountNumber: "1234567890123456",
+      accountName: "Vysya Sangam Mupkal",
+      accountNumber: "000000000000000",
       ifscCode: "KKBK0008370",
       bankName: "Kotak Mahindra Bank",
       branch: "Mupkal",
-      upiId: "templeproject@sbi",
+      upiId: "@kotak",
       onlineDonation: "ఆన్‌లైన్ దానం ఎంపికలు",
       copy: "కాపీ చేయండి",
       copied: "కాపీ అయింది!",
-      contactForDonation: "దానాలకు సంబంధించిన ఏవైనా ప్రశ్నలకు, దయచేసి మాను +91 98765 43210 వద్ద సంప్రదించండి"
+      contactForDonation: "దానాలకు సంబంధించిన ఏవైనా ప్రశ్నలకు, దయచేసి మాను +91 9490241116 వద్ద సంప్రదించండి"
     }
   };
 

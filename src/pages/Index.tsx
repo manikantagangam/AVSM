@@ -23,24 +23,26 @@ const Index = () => {
       donateNow: "Donate Now",
       learnMore: "Learn More",
       aboutUs: "About Us",
-      aboutText: "We are a dedicated community of devotees committed to building a magnificent temple that will serve as a spiritual sanctuary for generations to come. Our organization was founded with the vision of creating a sacred space where people can find peace, connect with the divine, and celebrate our rich cultural heritage together.",
+      aboutText: "We are a dedicated community of devotees committed to build a magnificent temple that will serve as a spiritual sanctuary for generations to come. Our organization was founded with the vision of creating a sacred space where people can find peace, connect with the divine, and celebrate our rich cultural heritage together.",
       ourMission: "Our Mission",
       missionText: "We are building a magnificent temple that will serve as a spiritual center for our community for generations to come. Your generous donations will help us create a sacred space where devotees can find peace, perform prayers, and celebrate festivals together.",
       progress: "Construction Progress",
-      progressText: "We have raised ₹12,50,000 out of our ₹50,00,000 goal",
+      progressText: "We have raised ₹44,00,000 out of our ₹1,00,00,000 goal",
       contact: "Contact Us",
       features: {
         community: "Community Center",
         communityDesc: "A space for spiritual gatherings and cultural events",
         worship: "Prayer Halls",
-        worshipDesc: "Multiple halls for different religious ceremonies",
+        worshipDesc: "Multiple halls for religious ceremonies",
         education: "Learning Center",
         educationDesc: "Religious education and cultural classes for all ages"
       },
       contactDetails: {
-        phone: "+91 98765 43210",
+        phone1: "+91 9490241116",
+        phone2: "+91 9440534333",
+        phone3: "+91 9396496375",
         email: "aryavysyasangammupkal@gmail.com",
-        address: "Temple Construction Committee, Main Street, Your City - 500001"
+        address: "Arya Vysya Sangam, Beside Marri Chettu Devasthanam, Mupkal - 503218"
       }
     },
     te: {
@@ -54,20 +56,22 @@ const Index = () => {
       ourMission: "మా లక్ష్యం",
       missionText: "మేము మా సమాజానికి తరతరాలుగా సేవ చేసే అద్భుతమైన దేవాలయాన్ని నిర్మిస్తున్నాము. మీ దాతృత్వ దానాలు భక్తులు శాంతిని పొందే, ప్రార్థనలు చేసే మరియు పండుగలను జరుపుకునే పవిత్ర స్థలాన్ని సృష్టించడంలో మాకు సహాయపడతాయి.",
       progress: "నిర్మాణ పురోగతి",
-      progressText: "మా ₹50,00,000 లక్ష్యంలో ₹12,50,000 సేకరించాము",
+      progressText: "మా ₹1,00,00,000 లక్ష్యంలో ₹44,00,000 సేకరించాము",
       contact: "మమ్మల్ని సంప్రదించండి",
       features: {
         community: "సామాజిక కేంద్రం",
         communityDesc: "ఆధ్యాత్మిక సమావేశాలు మరియు సాంస్కృతిక కార్యక్రమాలకు స్థలం",
         worship: "ప్రార్థనా మందిరాలు",
-        worshipDesc: "వివిధ మత వేడుకలకు అనేక మందిరాలు",
+        worshipDesc: "వివిధ వేడుకలకు అనేక మందిరాలు",
         education: "అభ్యాస కేంద్రం",
         educationDesc: "అన్ని వయసుల వారికి మత విద్య మరియు సాంస్కృతిక తరగతులు"
       },
       contactDetails: {
-        phone: "+91 98765 43210",
+        phone1: "+91 9490241116",
+        phone2: "+91 9440534333",
+        phone3: "+91 9396496375",
         email: "aryavysyasangammupkal@gmail.com",
-        address: "దేవాలయ నిర్మాణ కమిటీ, మెయిన్ స్ట్రీట్, మీ నగరం - 500001"
+        address: "ఆర్య వైశ్య సంగం, మర్రి చెట్టు దేవస్థానం ప్రక్కన, ముప్కాల్ - 503218"
       }
     }
   };
@@ -146,15 +150,15 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">{currentContent.progress}</h2>
           <div className="max-w-2xl mx-auto px-4">
-            <Progress value={25} className="h-3 md:h-4 mb-4" />
+            <Progress value={44} className="h-3 md:h-4 mb-4" />
             <p className="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">{currentContent.progressText}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div className="text-center p-4">
-                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹12.5L</div>
+                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹44L</div>
                 <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Raised</div>
               </div>
               <div className="text-center p-4">
-                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹50L</div>
+                <div className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-400">₹1Cr</div>
                 <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">Goal</div>
               </div>
               <div className="text-center p-4">
@@ -219,7 +223,9 @@ const Index = () => {
               <div className="flex flex-col items-center text-center p-4">
                 <Phone className="h-6 w-6 md:h-8 md:w-8 mb-4" />
                 <h3 className="font-semibold mb-2 text-sm md:text-base">Phone</h3>
-                <p className="text-sm md:text-base">{currentContent.contactDetails.phone}</p>
+                <p className="text-sm md:text-base">{currentContent.contactDetails.phone1}</p>
+                <p className="text-sm md:text-base">{currentContent.contactDetails.phone2}</p>
+                <p className="text-sm md:text-base">{currentContent.contactDetails.phone3}</p>
               </div>
               <div className="flex flex-col items-center text-center p-4">
                 <Mail className="h-6 w-6 md:h-8 md:w-8 mb-4" />
