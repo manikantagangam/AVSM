@@ -28,10 +28,10 @@ const Gallery = () => {
 
   // Construction progress images
   const constructionImages = [
-    "/uploads/53d9d85a-ea09-468f-b460-0ec6a3624bd8.png",
-    "/uploads/e6a8b053-2ff9-40a9-98b7-d6bd9dc2efb8.png",
-    "/uploads/63deb1eb-e962-4787-ad07-ff5578cf46e2.png",
-    "/uploads/fd7c19e3-171b-4dc4-a606-f6ad69443e9c.png"
+    "/uploads/temple1.jpeg",
+    "/uploads/temple2.jpeg",
+    "/uploads/temple3.jpeg",
+    "/uploads/temple4.jpeg"
   ];
 
   // Community events images
