@@ -79,7 +79,7 @@ const Gallery = () => {
 
         <div className="text-center bg-white dark:bg-gray-800 rounded-lg shadow-lg border-gray-200 dark:border-gray-700 p-6 md:p-8 mx-4 lg:mx-0">
           <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
-            More photos will be added regularly. To add new images to the gallery, upload them to the Lovable project and update the image arrays in the Gallery component.
+            More photos will be added regularly. To add new images to the gallery, upload them to the project and update the image arrays in the Gallery component.
           </p>
         </div>
       </div>
