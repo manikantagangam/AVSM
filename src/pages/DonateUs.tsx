@@ -18,10 +18,10 @@ const DonateUs = () => {
       title: "Support Our Temple Construction",
       subtitle: "Your generous donations help us build a sacred space for future generations",
       bankDetails: "Bank Account Details",
-      accountName: "Vysya Sangam Mupkal",
-      accountNumber: "000000000000000",
-      ifscCode: "KKBK0008370",
-      bankName: "Kotak Mahindra Bank",
+      accountName: "Arya Vysya Sangam",
+      accountNumber: "79104164115",
+      ifscCode: "TGRB0000222",
+      bankName: "Telangana Grameena Bank",
       branch: "Mupkal",
       upiId: "@kotak",
       onlineDonation: "Online Donation Options",
@@ -33,10 +33,10 @@ const DonateUs = () => {
       title: "మా దేవాలయ నిర్మాణానికి మద్దతు ఇవ్వండి",
       subtitle: "మీ దాతృత్వ దానాలు భవిష్యత్ తరాలకు పవిత్ర స్థలాన్ని నిర్మించడంలో మాకు సహాయపడతాయి",
       bankDetails: "బ్యాంక్ ఖాతా వివరాలు",
-      accountName: "Vysya Sangam Mupkal",
-      accountNumber: "000000000000000",
-      ifscCode: "KKBK0008370",
-      bankName: "Kotak Mahindra Bank",
+      accountName: "Arya Vysya Sangam",
+      accountNumber: "79104164115",
+      ifscCode: "TGRB0000222",
+      bankName: "Telangana Grameena Bank",
       branch: "Mupkal",
       upiId: "@kotak",
       onlineDonation: "ఆన్‌లైన్ దానం ఎంపికలు",
@@ -138,7 +138,7 @@ const DonateUs = () => {
                     <p className="text-gray-900 dark:text-gray-100">{currentContent.branch}</p>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-orange-50 dark:bg-gray-700 rounded-lg">
+                  {/* <div className="flex justify-between items-center p-3 bg-orange-50 dark:bg-gray-700 rounded-lg">
                     <div>
                       <p className="font-semibold text-gray-700 dark:text-gray-300">UPI ID:</p>
                       <p className="text-gray-900 dark:text-gray-100">{currentContent.upiId}</p>
@@ -151,7 +151,7 @@ const DonateUs = () => {
                     >
                       {copiedField === "UPI ID" ? <CheckCircle className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </CardContent>
