@@ -27,11 +27,17 @@ const Gallery = () => {
   const currentContent = content[language];
 
   // Construction progress images
+  //ensure to add new images to the public/uploads folder and update the paths in this array as needed
+  //update this gallery array with new images as they are added to the project
   const constructionImages = [
     "/uploads/temple1.jpeg",
     "/uploads/temple2.jpeg",
     "/uploads/temple3.jpeg",
-    "/uploads/temple4.jpeg"
+    "/uploads/temple4.jpeg",
+    "/uploads/temple5.jpeg",
+    "/uploads/temple6.jpeg",
+    "/uploads/temple7.jpeg",
+    "/uploads/temple8.jpeg"
   ];
 
   // Community events images
@@ -44,7 +50,7 @@ const Gallery = () => {
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-12 md:py-16">
+      {/* <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-8 md:mb-12">
           <Camera className="h-12 w-12 md:h-16 md:w-16 text-orange-600 dark:text-orange-400 mx-auto mb-4" />
           <h1 className="text-2xl md:text-4xl font-bold text-orange-900 dark:text-orange-100 mb-4 px-4">{currentContent.title}</h1>
@@ -61,7 +67,6 @@ const Gallery = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-600 dark:text-gray-400 mt-4 italic text-sm md:text-base">Temple construction progress photos</p>
           </div>
 
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border-gray-200 dark:border-gray-700 p-6 md:p-8">
@@ -73,16 +78,72 @@ const Gallery = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-600 dark:text-gray-400 mt-4 italic text-sm md:text-base">Community event photos</p>
           </div>
         </div>
+      </div> */}
 
-        <div className="text-center bg-white dark:bg-gray-800 rounded-lg shadow-lg border-gray-200 dark:border-gray-700 p-6 md:p-8 mx-4 lg:mx-0">
-          <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
-            More photos will be added regularly. To add new images to the gallery, upload them to the project and update the image arrays in the Gallery component.
-          </p>
+      <div className="container mx-auto px-4 py-12 md:py-16">
+
+  {/* Page Header */}
+  <div className="text-center mb-10 md:mb-14">
+    <Camera className="h-12 w-12 md:h-16 md:w-16 text-orange-600 dark:text-orange-400 mx-auto mb-4" />
+    <h1 className="text-2xl md:text-4xl font-bold text-orange-900 dark:text-orange-100 mb-4 px-4">
+      {currentContent.title}
+    </h1>
+    {/* <p className="text-lg md:text-xl text-orange-700 dark:text-orange-300 max-w-2xl mx-auto px-4">
+      {currentContent.subtitle}
+    </p> */}
+  </div>
+
+  {/* Construction Section - TOP */}
+  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 md:p-8 mb-12">
+    
+    <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
+      {currentContent.constructionTitle}
+    </h2>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {constructionImages.map((image, index) => (
+        <div
+          key={index}
+          className="rounded-lg overflow-hidden h-32 sm:h-40 md:h-48 bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-700 dark:to-gray-600"
+        >
+          <img
+            src={image}
+            alt={`Construction Progress ${index + 1}`}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          />
         </div>
-      </div>
+      ))}
+    </div>
+
+  </div>
+
+  {/* Events Section - BELOW */}
+  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 md:p-8">
+    
+    <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
+      {currentContent.eventsTitle}
+    </h2>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {eventImages.map((image, index) => (
+        <div
+          key={index}
+          className="rounded-lg overflow-hidden h-32 sm:h-40 md:h-48 bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-700 dark:to-gray-600"
+        >
+          <img
+            src={image}
+            alt={`Community Event ${index + 1}`}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+</div>
 
       {/* Footer */}
       <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 md:py-8 px-4 mt-12 md:mt-16">
@@ -92,7 +153,7 @@ const Gallery = () => {
             <span className="text-base md:text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
           </div>
           <p className="text-gray-400 text-xs md:text-sm px-4">
-            © 2024 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
+            © 2026 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
           </p>
         </div>
       </footer>
