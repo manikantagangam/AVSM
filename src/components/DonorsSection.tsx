@@ -28,8 +28,8 @@ const donors = [
     image: "/uploads/donors/no-picture.jpg",
   },
   {
-    name: "Sri Gangam Srinivas",
-    amount: "₹10,00,000",
+    name: "Sri Gangam Shankaraiah",
+    amount: "₹1,11,000",
     image: "/uploads/donors/no-picture.jpg",
   },
 ];
