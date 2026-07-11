@@ -231,7 +231,6 @@ const Index = () => {
             
             {/* Google Map */}
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 md:h-80 w-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d943.6163020080113!2d78.36246392912408!3d18.910791840522936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751126747038!5m2!1sen!2sin"
                   width="100%"
@@ -242,12 +241,6 @@ const Index = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Temple Location"
                 ></iframe>
-              </div>
-              <div className="p-4 bg-white dark:bg-gray-700">
-                <p className="text-center text-gray-600 dark:text-gray-300 text-sm">
-                  📍 Temple Construction Site Location
-                </p>
-              </div>
             </div>
           </div>
         </div>
