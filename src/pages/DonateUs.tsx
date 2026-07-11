@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { HandCoins } from "lucide-react";
+import { Landmark } from "lucide-react";
+import { Building2 } from "lucide-react";
 
 const DonateUs = () => {
   const { language } = useLanguage();
@@ -69,7 +72,25 @@ const DonateUs = () => {
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <div className="text-6xl mb-4">🙏</div>
+          
+          
+          <div className="mb-6 flex justify-center">
+  {/* Light Mode */}
+  <img
+    src="/uploads/donate-lightbg.png"
+    alt="Donate"
+    className="block dark:hidden h-28 md:h-36 w-auto"
+  />
+
+  {/* Dark Mode */}
+  <img
+    src="/uploads/donate-page.png"
+    alt="Donate"
+    className="hidden dark:block h-28 md:h-36 w-auto"
+  />
+</div>
+
+
           <h1 className="text-4xl font-bold text-orange-900 dark:text-orange-100 mb-4">{currentContent.title}</h1>
           <p className="text-xl text-orange-700 dark:text-orange-300 max-w-2xl mx-auto">{currentContent.subtitle}</p>
         </div>

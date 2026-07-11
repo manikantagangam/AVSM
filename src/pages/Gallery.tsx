@@ -57,7 +57,6 @@ const Gallery = () => {
 
   {/* Page Header */}
   <div className="text-center mb-10 md:mb-14">
-    <Camera className="h-12 w-12 md:h-16 md:w-16 text-orange-600 dark:text-orange-400 mx-auto mb-4" />
     <h1 className="text-2xl md:text-4xl font-bold text-orange-900 dark:text-orange-100 mb-4 px-4">
       {currentContent.title}
     </h1>
