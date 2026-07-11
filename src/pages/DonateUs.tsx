@@ -59,7 +59,12 @@ const DonateUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
+            <div
+  className={`min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800 ${
+    language === "te" ? "telugu" : ""
+  }`}
+>
+
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -137,21 +142,6 @@ const DonateUs = () => {
                     <p className="font-semibold text-gray-700 dark:text-gray-300">Branch:</p>
                     <p className="text-gray-900 dark:text-gray-100">{currentContent.branch}</p>
                   </div>
-
-                  {/* <div className="flex justify-between items-center p-3 bg-orange-50 dark:bg-gray-700 rounded-lg">
-                    <div>
-                      <p className="font-semibold text-gray-700 dark:text-gray-300">UPI ID:</p>
-                      <p className="text-gray-900 dark:text-gray-100">{currentContent.upiId}</p>
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => copyToClipboard(currentContent.upiId, "UPI ID")}
-                      className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-600"
-                    >
-                      {copiedField === "UPI ID" ? <CheckCircle className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                    </Button>
-                  </div> */}
                 </div>
               </div>
             </CardContent>

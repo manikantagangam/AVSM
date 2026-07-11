@@ -47,41 +47,12 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
+        <div
+  className={`min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800 ${
+    language === "te" ? "telugu" : ""
+  }`}
+>
       <Navigation />
-      
-      {/* <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="text-center mb-8 md:mb-12">
-          <Camera className="h-12 w-12 md:h-16 md:w-16 text-orange-600 dark:text-orange-400 mx-auto mb-4" />
-          <h1 className="text-2xl md:text-4xl font-bold text-orange-900 dark:text-orange-100 mb-4 px-4">{currentContent.title}</h1>
-          <p className="text-lg md:text-xl text-orange-700 dark:text-orange-300 max-w-2xl mx-auto px-4">{currentContent.subtitle}</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border-gray-200 dark:border-gray-700 p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 md:mb-6 text-center">{currentContent.constructionTitle}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              {constructionImages.map((image, index) => (
-                <div key={index} className="bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-700 dark:to-gray-600 rounded-lg h-32 sm:h-40 overflow-hidden">
-                  <img src={image} alt={`Construction Progress ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border-gray-200 dark:border-gray-700 p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 md:mb-6 text-center">{currentContent.eventsTitle}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              {eventImages.map((image, index) => (
-                <div key={index} className="bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-700 dark:to-gray-600 rounded-lg h-32 sm:h-40 overflow-hidden">
-                  <img src={image} alt={`Community Event ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="container mx-auto px-4 py-12 md:py-16">
 
   {/* Page Header */}
@@ -117,22 +88,6 @@ const Gallery = () => {
     </div>
   ))}
 </div>
-
-    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      {constructionImages.map((image, index) => (
-        <div
-          key={index}
-          className="rounded-lg overflow-hidden h-32 sm:h-40 md:h-48 bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-700 dark:to-gray-600"
-        >
-          <img
-            src={image}
-            alt={`Construction Progress ${index + 1}`}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      ))}
-    </div> */}
-
   </div>
 
   {/* Events Section - BELOW */}
