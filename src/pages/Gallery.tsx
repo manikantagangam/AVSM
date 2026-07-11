@@ -19,7 +19,7 @@ const Gallery = () => {
       title: "గ్యాలరీ",
       subtitle: "మా దేవాలయ నిర్మాణ పురోగతి మరియు సమాజ కార్యక్రమాల ఫోటోలు",
       constructionTitle: "నిర్మాణ పురోగతి",
-      eventsTitle: "సమాజ కార్యక్రమాలు",
+      eventsTitle: "కార్యక్రమాలు",
       noPhotos: "ఫోటోలు త్వరలో అప్‌లోడ్ చేయబడతాయి. మా దేవాలయ నిర్మాణ పురోగతి మరియు సమాజ సమావేశాలపై అప్‌డేట్‌ల కోసం వేచి ఉండండి."
     }
   };
@@ -30,14 +30,14 @@ const Gallery = () => {
   //ensure to add new images to the public/uploads folder and update the paths in this array as needed
   //update this gallery array with new images as they are added to the project
   const constructionImages = [
+    "/uploads/paintedtemple1.jpeg",
+  "/uploads/paintedtemple2.jpeg",
     "/uploads/temple1.jpeg",
     "/uploads/temple2.jpeg",
     "/uploads/temple3.jpeg",
     "/uploads/temple4.jpeg",
     "/uploads/temple5.jpeg",
     "/uploads/temple6.jpeg",
-    "/uploads/temple7.jpeg",
-    "/uploads/temple8.jpeg"
   ];
 
   // Community events images
@@ -162,17 +162,32 @@ const Gallery = () => {
 </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 md:py-8 px-4 mt-12 md:mt-16">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-400" />
-            <span className="text-base md:text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
-          </div>
-          <p className="text-gray-400 text-xs md:text-sm px-4">
-            © 2026 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
-          </p>
-        </div>
-      </footer>
+            <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 md:py-8 px-4">
+  <div className="container mx-auto text-center">
+    <div className="flex items-center justify-center space-x-2 mb-4">
+      <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-400" />
+      <span className="text-base md:text-lg font-semibold">
+        Arya Vysya Sangam - Mupkal
+      </span>
+    </div>
+
+    <p className="text-gray-400 text-xs md:text-sm px-4">
+      © 2026 Arya Vysya Sangam - Mupkal. All rights reserved.
+    </p>
+
+    <p className="mt-3 text-xs md:text-sm text-gray-500">
+      designed & developed by{" "}
+      <a
+        href="https://manikantagangam.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-orange-400 hover:text-orange-300 hover:underline transition-colors"
+      >
+        Manikanta Gangam
+      </a>
+    </p>
+  </div>
+</footer>
     </div>
   );
 };

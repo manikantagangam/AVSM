@@ -60,3 +60,7 @@
 .animate-donor-scroll:hover {
   animation-play-state: paused;
 }
+
+.telugu {
+    font-family: "Peddana", serif !important;
+}

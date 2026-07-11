@@ -8,29 +8,112 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const donors = [
   {
-    name: "Sri Dhanpal Suryanarayana MLA (Nizamabad Urban)",
+    nameEn: "Sri Dhanpal Suryanarayana (MLA Nizamabad Urban)",
+    nameTe: "శ్రీ ధన్పాల్ సూర్యనారాయణ",
     amount: "₹2,51,000",
     image: "/uploads/donors/dhanpal-suryanarayana.jpeg",
   },
   {
-    name: "Sri Argula Raghunandan Das Texas USA",
-    amount: "₹1,51,000",
-    image: "/uploads/donors/no-picture.jpg",
+    nameEn: "Sri Bompelly Bhumeshwar",
+    nameTe: "శ్రీ బొంపల్లి భూమేశ్వర్",
+    amount: "",
+    image: "/uploads/donors/bompelly-bhueshwar.jpeg",
   },
   {
-    name: "Sri Moturi Muralikrishna San francisco USA",
-    amount: "₹1,11,116",
-    image: "/uploads/donors/no-picture.jpg",
+    nameEn: "Sri Narla Mohan",
+    nameTe: "శ్రీ నార్ల మోహన్, భారతి దంపతులు",
+    amount: "",
+    image: "/uploads/donors/narla-mohan.jpeg",
   },
   {
-    name: "Sri Pallikonda Gopinath",
-    amount: "₹1,11,000",
-    image: "/uploads/donors/no-picture.jpg",
+    nameEn: "Sri Mukka Radhakishan Gupta",
+    nameTe: "శ్రీ ముక్క రాధాకిషన్ గుప్తా",
+    amount: "",
+    image: "/uploads/donors/mukka-radhakishan.jpeg",
   },
   {
-    name: "Sri Gangam Shankaraiah",
-    amount: "₹1,11,000",
-    image: "/uploads/donors/no-picture.jpg",
+    nameEn: "Sri Kaparthy Srinivas",
+    nameTe: "శ్రీ కాపర్తి శ్రీనివాస్,వనజ దంపతులు",
+    amount: "",
+    image: "/uploads/donors/kaparthy-srinivas.jpeg",
+  },
+  {
+    nameEn: "Sri Mara Manohar",
+    nameTe: "శ్రీ మార మనోహర్, పూజిత దంపతులు",
+    amount: "",
+    image: "/uploads/donors/mara-manohar.jpeg",
+  },
+  {
+    nameEn: "Sri Kondra Dhanpal Gupta",
+    nameTe: "శ్రీ కోండ్ర ధన్ పాల్ గుప్తా",
+    amount: "",
+    image: "/uploads/donors/dhanpal-sir.jpeg",
+  },
+  {
+    nameEn: "Sri Gangam Shankaraiah",
+    nameTe: "శ్రీ గంగం శంకరయ్య",
+    amount: "",
+    image: "/uploads/donors/gangam-shankaraiah.jpeg",
+  },
+  {
+    nameEn: "Sri Moturi Muralikrishna",
+    nameTe: "శ్రీ మోటూరి మురళీకృష్ణ",
+    amount: "",
+    image: "/uploads/donors/1560959804418.jpeg",
+  },
+  {
+    nameEn: "Sri Argula Bhagvan Das",
+    nameTe: "శ్రీ అర్గుల భగవాన్ దాస్",
+    amount: "",
+    image: "/uploads/donors/bhagwan-das.jpeg",
+  },
+  {
+    nameEn: "Sri Argula Shankar Das",
+    nameTe: "శ్రీ అర్గుల శంకర్ దాస్",
+    amount: "",
+    image: "/uploads/donors/shankar-das.jpeg",
+  },
+  {
+    nameEn: "Sri Kantala Gangadhar",
+    nameTe: "శ్రీ కాంతాల గంగాధర్",
+    amount: "",
+    image: "/uploads/donors/kantala-gangadhar.jpeg",
+  },
+  {
+    nameEn: "Sri Paldhe Devender",
+    nameTe: "శ్రీ పాల్దె దేవేందర్ గుప్తా",
+    amount: "",
+    image: "/uploads/donors/palde-devendar.jpeg",
+  },
+  {
+    nameEn: "Sri Pampatti Vikram",
+    nameTe: "శ్రీ పాంపట్టి విక్రమ్",
+    amount: "",
+    image: "/uploads/donors/vikram-uncle.jpeg",
+  },
+  {
+    nameEn: "Sri Pallikonda Gopinath",
+    nameTe: "శ్రీ పల్లికొండ గోపీనాథ్",
+    amount: "",
+    image: "/uploads/donors/gopi-sir.jpeg",
+  },
+  {
+    nameEn: "Sri Chinthala Venkateshwar",
+    nameTe: "శ్రీ చింతల వెంకటేశ్వర్",
+    amount: "",
+    image: "/uploads/donors/chinthala-venkateshwar.jpeg",
+  },
+  {
+    nameEn: "Sri Nalla Vilas",
+    nameTe: "శ్రీ నల్ల విలాస్",
+    amount: "",
+    image: "/uploads/donors/nalla-vilas.jpeg",
+  },
+  {
+    nameEn: "Sri Muthyapu Prabhakar",
+    nameTe: "శ్రీ ముత్యపు ప్రభాకర్",
+    amount: "",
+    image: "/uploads/donors/prabhakar-muthyapu.jpeg",
   },
 ];
 
@@ -86,17 +169,19 @@ const DonorsSection = () => {
     >
       <div className="rounded-2xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
 
-        <img
-          src={donor.image}
-          alt={donor.name}
-          className="w-full h-56 object-cover"
-        />
+      <div className="h-64 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2">
+  <img
+    src={donor.image}
+    alt={language === "te" ? donor.nameTe : donor.nameEn}
+    className="max-w-full max-h-full object-contain"
+  />
+</div>
 
         <div className="p-5 text-center">
 
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            {donor.name}
-          </h3>
+  {language === "te" ? donor.nameTe : donor.nameEn}
+</h3>
 
           <p className="mt-2 text-xl font-bold text-orange-600">
             {donor.amount}

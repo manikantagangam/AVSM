@@ -120,3 +120,29 @@
 .animate-donor-scroll:hover {
   animation-play-state: paused;
 }
+
+.telugu {
+    font-family: "Peddana", serif !important;
+}
+
+/* Telugu Fonts */
+
+.telugu h1,
+.telugu h2,
+.telugu h3,
+.telugu h4,
+.telugu h5,
+.telugu h6 {
+    font-family: "Peddana", serif !important;
+}
+
+.telugu p,
+.telugu span,
+.telugu button,
+.telugu a,
+.telugu li,
+.telugu label,
+.telugu input,
+.telugu textarea {
+    font-family: "Mandali", sans-serif !important;
+}

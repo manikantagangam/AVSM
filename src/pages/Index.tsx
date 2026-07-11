@@ -81,18 +81,12 @@ const Index = () => {
 
   const currentContent = content[language];
 
+  // Gallery Preview Images
   const galleryPreview = [
   "/uploads/paintedtemple1.jpeg",
   "/uploads/paintedtemple2.jpeg",
   "/uploads/temple1.jpeg",
   "/uploads/temple2.jpeg",
-  // "/uploads/temple1.jpeg",
-  // "/uploads/temple2.jpeg",
-  // "/uploads/temple3.jpeg",
-  // "/uploads/temple4.jpeg",
-  // "/uploads/340ba2bc-9d08-4c59-9ac6-89b7e383d2c7.png",
-  // "/uploads/paintedtemple1.jpeg"
-  // "/uploads/ac9fb44c-0fce-497d-af22-586f8755a9ed.png", // Optional 6th image
 ];
 
   const handleDonateNow = () => {
@@ -100,7 +94,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
+   // <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800">
+
+    <div
+  className={`min-h-screen bg-gradient-to-b from-orange-50 to-amber-50 dark:from-gray-900 dark:to-gray-800 ${
+    language === "te" ? "telugu" : ""
+  }`}
+>
+
       <Navigation />
 
       {/* Hero Section */}
@@ -109,20 +110,10 @@ const Index = () => {
           <div className="mb-6 md:mb-8">
             <img src="/uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-24 md:h-32 w-auto mx-auto mb-4" />
             <div className="text-center space-y-3 mb-6">
-              {/* <p className="text-lg md:text-xl text-orange-800 dark:text-orange-200 font-semibold italic">
-                వసవి మాత శ్లోకాలు
-              </p> */}
               <div className="bg-white/80 dark:bg-gray-800/80 rounded-lg p-4 md:p-6 max-w-3xl mx-auto">
                 <p className="text-base md:text-lg text-orange-900 dark:text-orange-100 mb-3 leading-relaxed">
-                  {/* "వసవి మాత మమ్మల్ని రక్షించేది, మా కుటుంబాలను ఆశీర్వదించేది<br />
-                  మా వ్యాపారాలలో వృద్ధిని కలిగించేది, మా జీవితాలను పవిత్రం చేసేది" */}
                   "ఓం వాసవాంబాయై విద్మహే, కుసుమపుత్రిచ ధీమహి। తన్నో వాసవి ప్రచోదయాత్।।"
-                  {/* {currentContent.slokam} */}
                 </p>
-                {/* <p className="text-base md:text-lg text-orange-900 dark:text-orange-100 leading-relaxed">
-                  "కోమతి వైశ్యుల కులదైవం వసవి మాత, మా సంప్రదాయాలను కాపాడేది<br />
-                  సత్యం, న్యాయం, దర్మంతో మాకు మార్గదర్శకత్వం చేసేది"
-                </p> */}
               </div>
             </div>
           </div>
@@ -189,50 +180,6 @@ const Index = () => {
         </div>
       </section>
 
-
-{/* Temple Gallery */}
-{/* <section className="py-14 md:py-16 px-4 bg-white dark:bg-gray-800">
-  <div className="container mx-auto max-w-6xl">
-
-    <div className="text-center mb-10">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-        Temple Gallery
-      </h2>
-
-      <p className="text-gray-600 dark:text-gray-300 mt-3 max-w-2xl mx-auto">
-        Explore a glimpse of our temple construction journey and community
-        events.
-      </p>
-    </div>
-
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-      {galleryPreview.map((image, index) => (
-        <div
-          key={index}
-          className="overflow-hidden rounded-xl shadow-lg group"
-        >
-          <img
-            src={image}
-            alt={`Temple ${index + 1}`}
-            loading="lazy"
-            className="w-full h-56 md:h-72 object-cover transition duration-500 group-hover:scale-110"
-          />
-        </div>
-      ))}
-    </div>
-
-    <div className="text-center mt-10">
-      <Link
-        to="/gallery"
-        className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition"
-      >
-        View Complete Gallery →
-      </Link>
-    </div>
-
-  </div>
-</section> */}
-
 {/* Gallery Preview */}
 <section className="py-8 bg-white dark:bg-gray-800">
   <div className="w-full">
@@ -255,48 +202,6 @@ const Index = () => {
 
   </div>
 </section>
-      {/* Mission Section */}
-      {/* <section id="mission" className="py-12 md:py-16 px-4 bg-white dark:bg-gray-800">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8 md:mb-12">{currentContent.ourMission}</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="px-4">
-              <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                {currentContent.missionText}
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Users className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.community}</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.communityDesc}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Star className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.worship}</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.worshipDesc}</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-600 dark:text-orange-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm md:text-base">{currentContent.features.education}</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{currentContent.features.educationDesc}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg border-gray-200 dark:border-gray-600 p-6 md:p-8 mx-4 lg:mx-0">
-              <div className="bg-gradient-to-b from-orange-100 to-amber-100 dark:from-gray-600 dark:to-gray-500 rounded-lg h-48 md:h-64 flex items-center justify-center">
-                <Building className="h-24 w-24 md:h-32 md:w-32 text-orange-600 dark:text-orange-400" />
-              </div>
-              <p className="text-center text-gray-600 dark:text-gray-300 mt-4 italic text-sm md:text-base">Artist's impression of the temple</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Contact Section */}
       <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-900 to-amber-900 dark:from-gray-900 dark:to-gray-800 text-white">
@@ -350,16 +255,31 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 md:py-8 px-4">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-400" />
-            <span className="text-base md:text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
-          </div>
-          <p className="text-gray-400 text-xs md:text-sm px-4">
-            © 2026 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
-          </p>
-        </div>
-      </footer>
+  <div className="container mx-auto text-center">
+    <div className="flex items-center justify-center space-x-2 mb-4">
+      <Building className="h-5 w-5 md:h-6 md:w-6 text-orange-400" />
+      <span className="text-base md:text-lg font-semibold">
+        Arya Vysya Sangam - Mupkal
+      </span>
+    </div>
+
+    <p className="text-gray-400 text-xs md:text-sm px-4">
+      © 2026 Arya Vysya Sangam - Mupkal. All rights reserved.
+    </p>
+
+    <p className="mt-3 text-xs md:text-sm text-gray-500">
+      designed & developed by{" "}
+      <a
+        href="https://manikantagangam.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-orange-400 hover:text-orange-300 hover:underline transition-colors"
+      >
+        Manikanta Gangam
+      </a>
+    </p>
+  </div>
+</footer>
     </div>
   );
 };
