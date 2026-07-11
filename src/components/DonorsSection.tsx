@@ -24,7 +24,7 @@ const donors = [
   },
   {
     name: "Sri Pallikonda Gopinath",
-    amount: "₹1,00,000",
+    amount: "₹1,11,000",
     image: "/uploads/donors/no-picture.jpg",
   },
   {
