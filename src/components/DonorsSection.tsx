@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const donors = [
   {
     nameEn: "Sri Dhanpal Suryanarayana (MLA Nizamabad Urban)",
-    nameTe: "శ్రీ ధన్పాల్ సూర్యనారాయణ",
+    nameTe: "శ్రీ ధన్పాల్ సూర్యనారాయణ (ఎం.ఎల్.ఏ, నిజామాబాద్ అర్బన్)",
     amount: "₹2,51,000",
     image: "/uploads/donors/dhanpal-suryanarayana.jpeg",
   },
@@ -75,7 +75,7 @@ const donors = [
   },
   {
     nameEn: "Sri Kantala Gangadhar",
-    nameTe: "శ్రీ కాంతాల గంగాధర్",
+    nameTe: "శ్రీ కంటాల గంగాధర్, చంద్రబాగ - మెట్ పల్లి",
     amount: "",
     image: "/uploads/donors/kantala-gangadhar.jpeg",
   },
