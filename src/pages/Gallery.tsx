@@ -102,7 +102,23 @@ const Gallery = () => {
       {currentContent.constructionTitle}
     </h2>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 space-y-5">
+  {constructionImages.map((image, index) => (
+    <div
+      key={index}
+      className="break-inside-avoid overflow-hidden rounded-xl shadow-lg"
+    >
+      <img
+        src={image}
+        alt={`Construction Progress ${index + 1}`}
+        loading="lazy"
+        className="w-full h-auto transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+  ))}
+</div>
+
+    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {constructionImages.map((image, index) => (
         <div
           key={index}
@@ -115,7 +131,7 @@ const Gallery = () => {
           />
         </div>
       ))}
-    </div>
+    </div> */}
 
   </div>
 

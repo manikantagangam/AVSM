@@ -101,3 +101,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes donorScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-donor-scroll {
+  display: flex;
+  width: max-content;
+  animation: donorScroll 25s linear infinite;
+}
+
+.animate-donor-scroll:hover {
+  animation-play-state: paused;
+}

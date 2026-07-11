@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes donorScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-donor-scroll {
+  display: flex;
+  width: max-content;
+  animation: donorScroll 30s linear infinite;
+}
+
+.animate-donor-scroll:hover {
+  animation-play-state: paused;
+}

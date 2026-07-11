@@ -8,7 +8,10 @@ import { Users, Building, Phone, Mail, MapPin, Star } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import DonorsSection from "@/components/DonorsSection";
 
 const Index = () => {
   const { language } = useLanguage();
@@ -18,7 +21,7 @@ const Index = () => {
   const content = {
     en: {
       slokam : "Om Vāsavāmbhāya vidmahe, Kusumaputryai dhīmahi | tanno Vāsavī prachodayāt ||",
-      title: "Help Build Our Sacred Temple",
+      title: "Contribute to Temple Construction",
       subtitle: "Join us in creating a divine space for worship, community, and spiritual growth",
       donateNow: "Donate Now",
       learnMore: "Learn More",
@@ -77,6 +80,19 @@ const Index = () => {
   };
 
   const currentContent = content[language];
+
+  const galleryPreview = [
+  "/uploads/paintedtemple1.jpeg",
+  "/uploads/paintedtemple2.jpeg",
+  "/uploads/temple1.jpeg",
+  // "/uploads/temple1.jpeg",
+  // "/uploads/temple2.jpeg",
+  // "/uploads/temple3.jpeg",
+  // "/uploads/temple4.jpeg",
+  // "/uploads/340ba2bc-9d08-4c59-9ac6-89b7e383d2c7.png",
+  // "/uploads/paintedtemple1.jpeg"
+  // "/uploads/ac9fb44c-0fce-497d-af22-586f8755a9ed.png", // Optional 6th image
+];
 
   const handleDonateNow = () => {
     navigate('/donate-us');
@@ -145,6 +161,8 @@ const Index = () => {
         </div>
       </section>
 
+      <DonorsSection />
+
       {/* Progress Section */}
       <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-gray-700 dark:to-gray-600">
         <div className="container mx-auto max-w-4xl text-center">
@@ -170,8 +188,74 @@ const Index = () => {
         </div>
       </section>
 
+
+{/* Temple Gallery */}
+{/* <section className="py-14 md:py-16 px-4 bg-white dark:bg-gray-800">
+  <div className="container mx-auto max-w-6xl">
+
+    <div className="text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
+        Temple Gallery
+      </h2>
+
+      <p className="text-gray-600 dark:text-gray-300 mt-3 max-w-2xl mx-auto">
+        Explore a glimpse of our temple construction journey and community
+        events.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+      {galleryPreview.map((image, index) => (
+        <div
+          key={index}
+          className="overflow-hidden rounded-xl shadow-lg group"
+        >
+          <img
+            src={image}
+            alt={`Temple ${index + 1}`}
+            loading="lazy"
+            className="w-full h-56 md:h-72 object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center mt-10">
+      <Link
+        to="/gallery"
+        className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition"
+      >
+        View Complete Gallery →
+      </Link>
+    </div>
+
+  </div>
+</section> */}
+
+{/* Gallery Preview */}
+<section className="py-8 bg-white dark:bg-gray-800">
+  <div className="w-full">
+
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-0">
+      {galleryPreview.map((image, index) => (
+        <div
+          key={index}
+          className="overflow-hidden"
+        >
+          <img
+            src={image}
+            alt={`Temple ${index + 1}`}
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
       {/* Mission Section */}
-      <section id="mission" className="py-12 md:py-16 px-4 bg-white dark:bg-gray-800">
+      {/* <section id="mission" className="py-12 md:py-16 px-4 bg-white dark:bg-gray-800">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8 md:mb-12">{currentContent.ourMission}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -211,7 +295,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-900 to-amber-900 dark:from-gray-900 dark:to-gray-800 text-white">
