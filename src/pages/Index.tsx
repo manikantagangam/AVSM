@@ -85,6 +85,7 @@ const Index = () => {
   "/uploads/paintedtemple1.jpeg",
   "/uploads/paintedtemple2.jpeg",
   "/uploads/temple1.jpeg",
+  "/uploads/temple2.jpeg",
   // "/uploads/temple1.jpeg",
   // "/uploads/temple2.jpeg",
   // "/uploads/temple3.jpeg",
