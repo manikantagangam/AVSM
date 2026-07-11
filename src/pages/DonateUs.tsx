@@ -172,7 +172,7 @@ const DonateUs = () => {
             <span className="text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
           </div>
           <p className="text-gray-400">
-            © 2025 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
+            © 2026 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
           </p>
         </div>
       </footer>

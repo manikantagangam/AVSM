@@ -271,7 +271,7 @@ const Index = () => {
             <span className="text-base md:text-lg font-semibold">Arya Vysya Sangam - Mupkal</span>
           </div>
           <p className="text-gray-400 text-xs md:text-sm px-4">
-            © 2025 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
+            © 2026 Arya Vysya Sangam - Mupkal. All rights reserved. Built with devotion and community support.
           </p>
         </div>
       </footer>
