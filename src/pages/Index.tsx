@@ -49,6 +49,7 @@ const Index = () => {
         address: "Arya Vysya Sangam, Beside Marri Chettu Devasthanam, Mupkal - 503218"
       }
     },
+    
     te: {
       slokam : "ఓం వాసవాంభాయ విద్యామహే, కుసుమపుత్ర్యై ధీమహి। తన్నో వాసవీ ప్రచోదయాత్॥",
       title: "మా పవిత్ర దేవాలయ నిర్మాణంలో సహాయం చేయండి",
