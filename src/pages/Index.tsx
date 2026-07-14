@@ -110,7 +110,8 @@ const Index = () => {
       <section className="py-12 md:py-20 px-4 text-center bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600">
         <div className="container mx-auto max-w-4xl">
           <div className="mb-6 md:mb-8">
-            <img src="/uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png" alt="Arya Vysya Sangam Logo" className="h-24 md:h-32 w-auto mx-auto mb-4" />
+            <img src="/uploads/vasavi_maatha.png" alt="Arya Vysya Sangam Logo" className="h-64 md:h-80 w-auto mx-auto mb-4" />
+            {/* // 40 56 */}
             <div className="text-center space-y-3 mb-6">
               <div className="bg-white/80 dark:bg-gray-800/80 rounded-lg p-4 md:p-6 max-w-3xl mx-auto">
                 <p className="text-base md:text-lg text-orange-900 dark:text-orange-100 mb-3 leading-relaxed">
@@ -131,16 +132,16 @@ const Index = () => {
               className="bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-600 text-white px-6 md:px-8 py-3 text-base md:text-lg w-full sm:w-auto"
               onClick={handleDonateNow}
             >
-              🙏 {currentContent.donateNow}
+            {currentContent.donateNow}
             </Button>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline" 
               className="border-orange-600 text-orange-600 hover:bg-orange-50 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-gray-700 px-6 md:px-8 py-3 text-base md:text-lg w-full sm:w-auto"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {currentContent.learnMore}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

@@ -113,7 +113,7 @@ const Navigation = () => {
               isActive('/donate-us') ? 'bg-orange-100 dark:bg-orange-800 text-orange-800 dark:text-orange-100' : 'text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
             }`}
           >
-            <span>🙏</span>
+            {/* <span>🙏</span> */}
             <span>{currentContent.donateUs}</span>
           </Link>
         </nav>
