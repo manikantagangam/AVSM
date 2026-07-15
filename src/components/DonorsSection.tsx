@@ -98,6 +98,12 @@ const donors = [
     image: "/uploads/donors/gopi-sir.jpeg",
   },
   {
+    nameEn: "Sri Marri Devender, Sangeetha - Drishti Opticals Indore",
+    nameTe: "శ్రీ మర్రి దేవేందర్, సంగీత - దృష్టి ఆప్టికల్స్ ఇందూర్",
+    amount: "",
+    image: "/uploads/donors/drishti-raju.jpeg",
+  },
+  {
     nameEn: "Sri Chinthala Venkateshwar",
     nameTe: "శ్రీ చింతల వెంకటేశ్వర్",
     amount: "",
