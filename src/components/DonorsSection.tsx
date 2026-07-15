@@ -110,6 +110,12 @@ const donors = [
     image: "/uploads/donors/drishti-raju.jpeg",
   },
   {
+    nameEn: "Sri Gangam Sambaiah, Maheshwari",
+    nameTe: "శ్రీ గంగం సాంబయ్య, మహేశ్వరి",
+    amount: "",
+    image: "/uploads/donors/maheshwari-peddamma.jpeg",
+  },
+  {
     nameEn: "Sri Chinthala Venkateshwar",
     nameTe: "శ్రీ చింతల వెంకటేశ్వర్",
     amount: "",
