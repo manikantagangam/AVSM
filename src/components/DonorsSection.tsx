@@ -92,6 +92,12 @@ const donors = [
     image: "/uploads/donors/vikram-uncle.jpeg",
   },
   {
+    nameEn: "Sri Chinthala Bharat Bhushan, Sashikala",
+    nameTe: "శ్రీ చింతల భారత్ భూషణ్, శశికళ",
+    amount: "",
+    image: "/uploads/donors/bharath-bhushan.jpeg",
+  },
+  {
     nameEn: "Sri Pallikonda Gopinath",
     nameTe: "శ్రీ పల్లికొండ గోపీనాథ్",
     amount: "",
