@@ -133,6 +133,12 @@ const donors = [
     amount: "",
     image: "/uploads/donors/prabhakar-muthyapu.jpeg",
   },
+  {
+    nameEn: "Sri Mamindla Laxmi Rajam, Sindhu M-plastz PVC Interiors",
+    nameTe: "శ్రీ మామిండ్ల లక్ష్మి రాజాం, సింధు ఎం-ప్లాస్ట్జ్ పీవీసీ ఇంటీరియర్స్",
+    amount: "",
+    image: "/uploads/donors/Mamindla-Laxmi-Rajam.jpeg",
+  },
 ];
 
 const DonorsSection = () => {
