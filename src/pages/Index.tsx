@@ -62,7 +62,7 @@ const Index = () => {
       missionText: "మేము మా సమాజానికి తరతరాలుగా సేవ చేసే అద్భుతమైన దేవాలయాన్ని నిర్మిస్తున్నాము. మీ దాతృత్వ దానాలు భక్తులు శాంతిని పొందే, ప్రార్థనలు చేసే మరియు పండుగలను జరుపుకునే పవిత్ర స్థలాన్ని సృష్టించడంలో మాకు సహాయపడతాయి.",
       progress: "నిర్మాణ పురోగతి",
       progressText: "మా ₹1,00,00,000 లక్ష్యంలో ₹44,00,000 సేకరించాము",
-      contact: "మమ్మల్ని సంప్రదించండి",
+      contact: "సంప్రదించండి",
       features: {
         community: "సామాజిక కేంద్రం",
         communityDesc: "ఆధ్యాత్మిక సమావేశాలు మరియు సాంస్కృతిక కార్యక్రమాలకు స్థలం",
@@ -207,27 +207,27 @@ const Index = () => {
 </section>
 
       {/* Contact Section */}
-      <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-orange-900 to-amber-900 dark:from-gray-900 dark:to-gray-800 text-white">
+      <section className="py-8 md:py-5 px-4 bg-gradient-to-r from-orange-900 to-amber-900 dark:from-gray-900 dark:to-gray-800 text-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">{currentContent.contact}</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">{currentContent.contact}</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6 md:gap-8">
-              <div className="flex flex-col items-center text-center p-4">
-                <Phone className="h-6 w-6 md:h-8 md:w-8 mb-4" />
-                <h3 className="font-semibold mb-2 text-sm md:text-base">Phone</h3>
-                <p className="text-sm md:text-base">{currentContent.contactDetails.phone1}</p>
-                <p className="text-sm md:text-base">{currentContent.contactDetails.phone2}</p>
-                <p className="text-sm md:text-base">{currentContent.contactDetails.phone3}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4 md:gap-5">
+              <div className="flex flex-col items-center text-center p-2">
+                <Phone className="h-5 w-5 md:h-6 md:w-6 mb-2" />
+                <h3 className="font-semibold mb-1 text-sm md:text-base">Phone</h3>
+                <p className="text-sm md:text-base leading-5">{currentContent.contactDetails.phone1}</p>
+                <p className="text-sm md:text-base leading-5">{currentContent.contactDetails.phone2}</p>
+                <p className="text-sm md:text-base leading-5">{currentContent.contactDetails.phone3}</p>
               </div>
-              <div className="flex flex-col items-center text-center p-4">
-                <Mail className="h-6 w-6 md:h-8 md:w-8 mb-4" />
-                <h3 className="font-semibold mb-2 text-sm md:text-base">Email</h3>
+              <div className="flex flex-col items-center text-center p-2">
+                <Mail className="h-5 w-5 md:h-6 md:w-6 mb-2" />
+                <h3 className="font-semibold mb-1 text-sm md:text-base">Email</h3>
                 <p className="text-sm md:text-base break-all">{currentContent.contactDetails.email}</p>
               </div>
-              <div className="flex flex-col items-center text-center p-4">
-                <MapPin className="h-6 w-6 md:h-8 md:w-8 mb-4" />
-                <h3 className="font-semibold mb-2 text-sm md:text-base">Address</h3>
+              <div className="flex flex-col items-center text-center p-2">
+                <MapPin className="h-5 w-5 md:h-6 md:w-6 mb-2" />
+                <h3 className="font-semibold mb-1 text-sm md:text-base">Address</h3>
                 <p className="text-xs md:text-sm">{currentContent.contactDetails.address}</p>
               </div>
             </div>
@@ -235,14 +235,14 @@ const Index = () => {
             {/* Google Map */}
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d943.6163020080113!2d78.36246392912408!3d18.910791840522936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751126747038!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.301902631402!2d78.36248857884414!3d18.911318446117857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcd95006702cbfd%3A0x7c360ae38c9c154!2sVasavi%20Maatha%20Temple!5e0!3m2!1sen!2sin!4v1784219437180!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Temple Location"
+                  title="Vasavi Maatha Temple Location"
                 ></iframe>
             </div>
           </div>
