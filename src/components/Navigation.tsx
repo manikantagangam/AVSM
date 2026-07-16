@@ -78,6 +78,7 @@ const Navigation = () => {
 >
   <img
     src="/uploads/db5a578d-e0cd-4b68-a94b-71e87ebae12b.png"
+    // src="/uploads/vysya-sangam-logo.png"
     alt="Arya Vysya Sangam Logo"
     className="h-10 w-auto flex-shrink-0"
   />

@@ -188,33 +188,57 @@ const DonorsSection = () => {
 >
   {donors.map((donor, index) => (
     <SwiperSlide
-      key={index}
-      style={{ width: "260px" }}
-    >
-      <div className="rounded-2xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+  key={index}
+  style={{ width: "260px" }}
+>
+  <div className="h-[380px] rounded-2xl bg-white dark:bg-gray-800 shadow-lg overflow-hidden flex flex-col">
 
-      <div className="h-64 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2">
-  <img
-    src={donor.image}
-    alt={language === "te" ? donor.nameTe : donor.nameEn}
-    className="max-w-full max-h-full object-contain"
-  />
-</div>
+    {/* Image */}
+    <div className="h-64 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-3 border-b border-gray-200 dark:border-gray-700">
+      <img
+        src={donor.image}
+        alt={language === "te" ? donor.nameTe : donor.nameEn}
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
 
-        <div className="p-5 text-center">
+    {/* Details */}
+    {/* </div><div className="flex flex-col justify-between flex-1 p-4"> */}
+    <div className="flex flex-col p-4">
 
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-  {language === "te" ? donor.nameTe : donor.nameEn}
-</h3>
+      {/* Name */}
+      <h3
+        className="text-lg font-semibold text-gray-900 dark:text-white text-center line-clamp-2"
+        title={language === "te" ? donor.nameTe : donor.nameEn}
+      >
+        {language === "te" ? donor.nameTe : donor.nameEn}
+      </h3>
 
-          <p className="mt-2 text-xl font-bold text-orange-600">
+      {/* Amount */}
+      {/* <div className="mt-4 h-8 flex items-center justify-center">
+        {donor.amount ? (
+          <p className="text-xl font-bold text-orange-600">
             {donor.amount}
           </p>
+        ) : (
+          <span className="text-transparent">----</span>
+        )}
+      </div> */}
 
-        </div>
+      <div className="mt-2 h-6 flex items-center justify-center">
+  {donor.amount ? (
+    <p className="text-lg font-bold text-orange-600">
+      {donor.amount}
+    </p>
+  ) : (
+    <span className="invisible text-lg">₹0</span>
+  )}
+</div>
 
-      </div>
-    </SwiperSlide>
+    </div>
+
+  </div>
+</SwiperSlide>
   ))}
 </Swiper>
 
