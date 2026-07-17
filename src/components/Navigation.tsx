@@ -52,7 +52,7 @@ const Navigation = () => {
     te: {
       home: "హోమ్",
       gallery: "గ్యాలరీ",
-      donateUs: "దానం చేయండి",
+      donateUs: "విరాళం ఇవ్వండి",
       switchLanguage: "English",
       logoText: "ఆర్య వైశ్య సంగం - ముప్కాల్"
     }
