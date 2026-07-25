@@ -85,10 +85,12 @@ const Index = () => {
 
   // Gallery Preview Images
   const galleryPreview = [
-  "/uploads/paintedtemple1.jpeg",
+  "/uploads/temple/temple_25july2026_frontview.png",
+  "/uploads/temple/temple_25july2026_leftview.jpg",
   "/uploads/paintedtemple2.jpeg",
-  "/uploads/temple1.jpeg",
-  "/uploads/temple2.jpeg",
+  "/uploads/paintedtemple1.jpeg",
+  "/uploads/temple/temple_25july2026_rightdiagcloseview.jpg",
+  "/uploads/temple/temple_25july2026_leftbackdiagview.jpg",
 ];
 
   const handleDonateNow = () => {
