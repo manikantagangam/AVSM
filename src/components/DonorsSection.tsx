@@ -139,6 +139,12 @@ const donors = [
     amount: "",
     image: "/uploads/donors/Mamindla-Laxmi-Rajam.jpeg",
   },
+  {
+    nameEn: "In Memory of Late Shri Nunugonda Anjaiah & Late Smt. Nunugonda Shyamala — Shri Nunugonda Ramakrishna (USA)",
+    nameTe: "కీ.శే. శ్రీ నునుగొండ అంజయ్య మరియు కీ.శే. నునుగొండ శ్యామల జ్ఞాపకాలు శ్రీ నునుగొండ రామకృష్ణ (USA)",
+    amount: "",
+    image: "/uploads/donors/anjayya.jpeg",
+  }
 ];
 
 const DonorsSection = () => {
