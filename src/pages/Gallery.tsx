@@ -31,8 +31,12 @@ const Gallery = () => {
   //ensure to add new images to the public/uploads folder and update the paths in this array as needed
   //update this gallery array with new images as they are added to the project
   const constructionImages = [
-    "/uploads/paintedtemple1.jpeg",
+    "/uploads/temple/temple_25july2026_frontview.png",
+  "/uploads/temple/temple_25july2026_leftview.jpg",
   "/uploads/paintedtemple2.jpeg",
+  "/uploads/paintedtemple1.jpeg",
+  "/uploads/temple/temple_25july2026_rightdiagcloseview.jpg",
+  "/uploads/temple/temple_25july2026_leftbackdiagview.jpg",
     "/uploads/temple1.jpeg",
     "/uploads/temple2.jpeg",
     "/uploads/temple3.jpeg",
