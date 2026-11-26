@@ -691,15 +691,15 @@ const Index = () => {
       </section>
 
       {/* Important Announcement - Temple Inauguration */}
-      <section
+      {/* <section
         id="inauguration"
         className="px-4 py-10 md:py-12 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
       >
         <div className="container mx-auto max-w-6xl">
-          <div className="rounded-2xl overflow-hidden border-2 border-amber-400 dark:border-amber-600 bg-white dark:bg-gray-800 shadow-xl">
+          <div className="rounded-2xl overflow-hidden border-2 border-amber-400 dark:border-amber-600 bg-white dark:bg-gray-800 shadow-xl"> */}
 
             {/* Announcement Header */}
-            <div className="bg-gradient-to-r from-orange-700 via-red-700 to-orange-700 text-center text-white px-5 py-6">
+            {/* <div className="bg-gradient-to-r from-orange-700 via-red-700 to-orange-700 text-center text-white px-5 py-6">
               <span className="inline-block rounded-full bg-yellow-300/20 border border-yellow-300 px-4 py-1 text-xs font-bold tracking-wider text-yellow-100 mb-3">
                 {currentInauguration.badge}
               </span>
@@ -715,10 +715,10 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="p-5 md:p-7">
+            <div className="p-5 md:p-7"> */}
 
               {/* Dates and Venue */}
-              <div className="grid md:grid-cols-2 gap-4 mb-5">
+              {/* <div className="grid md:grid-cols-2 gap-4 mb-5">
 
                 <div className="bg-orange-50 dark:bg-gray-700 rounded-xl p-5 text-center">
                   <CalendarDays className="h-7 w-7 mx-auto text-orange-600 dark:text-orange-300 mb-2" />
@@ -749,10 +749,10 @@ const Index = () => {
 
               <p className="text-center text-gray-700 dark:text-gray-200 leading-relaxed mb-7 max-w-3xl mx-auto">
                 {currentInauguration.invitation}
-              </p>
+              </p> */}
 
               {/* Programme Highlights */}
-              <h3 className="text-xl md:text-2xl font-bold text-center text-orange-900 dark:text-orange-200 mb-5">
+              {/* <h3 className="text-xl md:text-2xl font-bold text-center text-orange-900 dark:text-orange-200 mb-5">
                 {currentInauguration.scheduleTitle}
               </h3>
 
@@ -780,10 +780,10 @@ const Index = () => {
                     </p>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               {/* Invitation Download and WhatsApp Share */}
-              <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+              {/* <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
 
                 <a
                   href={invitationPdf}
@@ -803,10 +803,10 @@ const Index = () => {
                   <Share2 className="h-5 w-5" />
                   {currentInauguration.share}
                 </a>
-              </div>
+              </div> */}
 
               {/* Contact */}
-              <div className="text-center mt-6 text-sm text-gray-600 dark:text-gray-300">
+              {/* <div className="text-center mt-6 text-sm text-gray-600 dark:text-gray-300">
                 {currentInauguration.contact}{" "}
                 <a
                   href="tel:+919490241116"
@@ -818,7 +818,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Us Section */}
       <section
